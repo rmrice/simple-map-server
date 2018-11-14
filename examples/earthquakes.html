@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Major Earthquakes in the past 7 days</title>
+    <title>Major Earthquakes in the past 30 days</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
@@ -57,7 +57,7 @@
 
 <div class='map-overlay top'>
     <div class='map-overlay-inner'>
-        <h2>Significant earthquakes in the past 7 days</h2>
+        <h2>Significant earthquakes in the past 30 days</h2>
     </div>
     <div class='map-overlay-inner'>
         <div id='legend' class='legend'>
@@ -84,7 +84,7 @@ map.on('load', function() {
     //
     // Here we're using d3 to help us make the ajax request but you can use
     // Any request method (library or otherwise) you wish.
-    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson', function(err, data) {
+    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson', function(err, data) {
         if (err) throw err;
 
         map.addSource('earthquakes', {
