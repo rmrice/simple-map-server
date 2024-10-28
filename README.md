@@ -1,6 +1,6 @@
 # simple-map-server
 
-A simple map server, served out with express :map:
+A simple map server, served to your browser with express 🗺️
 
 ## Getting started
 
